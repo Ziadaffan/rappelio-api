@@ -1,0 +1,8 @@
+{
+  "watch": ["api"],
+  "ext": ".ts,.js,.json",
+  "ignore": ["api/**/*.spec.ts"],
+  "exec": "ts-node ./api/index.ts",
+  "restartable": "rs",
+  "delay": "2500"
+} 
