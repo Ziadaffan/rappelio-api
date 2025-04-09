@@ -12,6 +12,7 @@ export const isAuth = async (
 ): Promise<void> => {
   try {
     const authHeader = req.get("Authorization");
+    console.log("authHeader", authHeader);
     if (!authHeader) {
       res.status(401).json({ message: "Not Authenticated" });
       return;
@@ -19,7 +20,7 @@ export const isAuth = async (
 
     const token = authHeader.split(" ")[1];
     const decoded = jwt.verify(token, process.env.JWT_SECRET || "") as { userId: string };
-
+    console.log("decoded", decoded);
     if (!decoded) {
       res.status(401).json({ message: "Not Authenticated" });
       return;
