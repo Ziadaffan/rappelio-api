@@ -3,15 +3,7 @@ import mongoose from "mongoose";
 export const connectToDatabase = async () => {
   try {
     const conn = await mongoose.connect(
-      process.env.MONGO_DB_URI || "mongodb://localhost:27017/rappelio",
-      {
-        serverSelectionTimeoutMS: 5000,
-        socketTimeoutMS: 45000,
-        connectTimeoutMS: 10000,
-        retryWrites: true,
-        retryReads: true,
-        w: "majority",
-      }
+      process.env.MONGO_DB_URI || "mongodb://localhost:27017/rappelio"
     );
     if (process.env.NODE_ENV === "development") {
       console.log(`🔌 Connected to MongoDB: ${conn.connection.host}`);
