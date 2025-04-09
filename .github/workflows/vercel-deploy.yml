@@ -16,10 +16,10 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
 
       - name: Install Vercel CLI
-        run: npm install -g vercel
+        run: yarn global add vercel
 
       - name: Deploy to Vercel
         run: vercel deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
