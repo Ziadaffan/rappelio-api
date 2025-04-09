@@ -1,14 +1,19 @@
 import { Router } from "express";
-import { getUser, getUsers, updateUser, deleteUser, updatePassword } from "../../controllers/userController";
+import {
+  getUser,
+  getUsers,
+  updateUser,
+  deleteUser,
+  updatePassword,
+} from "../../controllers/userController";
 import { isAuth } from "../../middleware/isAuth";
-import { validateApiKey } from "../../middleware/validateApiKey";
 
 const router = Router();
 
-router.get("/", validateApiKey, isAuth, getUsers);
-router.get("/me", validateApiKey, isAuth, getUser);
-router.put("/me", validateApiKey, isAuth, updateUser);
-router.delete("/me", validateApiKey, isAuth, deleteUser);
-router.patch("/me", validateApiKey, isAuth, updatePassword);
+router.get("/", isAuth, getUsers);
+router.get("/me", isAuth, getUser);
+router.put("/me", isAuth, updateUser);
+router.delete("/me", isAuth, deleteUser);
+router.patch("/me", isAuth, updatePassword);
 
 export const userRouter = router;
