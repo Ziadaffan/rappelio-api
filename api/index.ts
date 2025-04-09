@@ -32,9 +32,6 @@ app.use(morgan("dev"));
 // Database connection middleware
 connectToDatabase();
 
-// API Key validation middleware
-app.use(validateApiKey);
-
 // Routes
 app.use("/api", router);
 
