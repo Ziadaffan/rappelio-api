@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import morgan from "morgan";
 import helmet from "helmet";
-import { validateApiKey } from "./middleware/validateApiKey";
 
 dotenv.config();
 
