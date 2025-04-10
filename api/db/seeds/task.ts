@@ -3,178 +3,204 @@ import { Types } from "mongoose";
 
 export const tasks: Partial<ITask>[] = [
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439011"),
     title: "Réunion d'équipe",
-    description: "Préparer la présentation pour la réunion d'équipe hebdomadaire",
+    description:
+      "Préparer la présentation pour la réunion d'équipe hebdomadaire",
     due_date: new Date("2024-03-25T10:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439011")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439011"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439012"),
     title: "Rapport mensuel",
     description: "Finaliser le rapport de performance du mois",
     due_date: new Date("2024-03-28T17:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439011")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439011"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439013"),
     title: "Révision de code",
     description: "Réviser le code de la nouvelle fonctionnalité",
     due_date: new Date("2024-03-26T15:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439011")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439011"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439014"),
     title: "Formation",
     description: "Compléter le module de formation sur la sécurité",
     due_date: new Date("2024-03-30T23:59:59.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439011")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439011"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439015"),
     title: "Backup des données",
     description: "Effectuer la sauvegarde hebdomadaire des données",
     due_date: new Date("2024-03-24T18:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439011")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439011"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439016"),
     title: "Analyse des métriques",
     description: "Analyser les métriques de performance du dernier trimestre",
     due_date: new Date("2024-03-27T16:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439012")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439012"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439017"),
     title: "Mise à jour documentation",
     description: "Mettre à jour la documentation technique",
     due_date: new Date("2024-03-29T17:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439012")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439012"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439018"),
     title: "Test d'intégration",
     description: "Exécuter les tests d'intégration pour le nouveau module",
     due_date: new Date("2024-03-25T14:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439012")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439012"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439019"),
     title: "Optimisation des requêtes",
     description: "Optimiser les requêtes de la base de données",
     due_date: new Date("2024-03-26T15:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439012")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439012"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd79943901a"),
     title: "Déploiement",
     description: "Préparer le déploiement de la nouvelle version",
     due_date: new Date("2024-03-28T10:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439012")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439012"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd79943901b"),
     title: "Revue de sécurité",
     description: "Effectuer l'audit de sécurité mensuel",
     due_date: new Date("2024-03-31T17:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439013")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439013"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd79943901c"),
     title: "Mise à jour des dépendances",
     description: "Mettre à jour les dépendances du projet",
     due_date: new Date("2024-03-26T16:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439013")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439013"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd79943901d"),
     title: "Tests de performance",
     description: "Exécuter les tests de performance",
     due_date: new Date("2024-03-27T14:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439013")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439013"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd79943901e"),
     title: "Correction de bugs",
     description: "Corriger les bugs critiques identifiés",
     due_date: new Date("2024-03-25T17:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439013")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439013"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd79943901f"),
     title: "Planification sprint",
     description: "Préparer la planification du prochain sprint",
     due_date: new Date("2024-03-29T10:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439013")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439013"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439020"),
     title: "Analyse des logs",
     description: "Analyser les logs d'erreur de la semaine",
     due_date: new Date("2024-03-26T11:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439014")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439014"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439021"),
     title: "Mise à jour API",
     description: "Mettre à jour la documentation de l'API",
     due_date: new Date("2024-03-28T15:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439014")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439014"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439022"),
     title: "Tests unitaires",
     description: "Écrire les tests unitaires pour le nouveau module",
     due_date: new Date("2024-03-27T16:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439014")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439014"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439023"),
     title: "Optimisation du cache",
     description: "Optimiser la stratégie de mise en cache",
     due_date: new Date("2024-03-25T13:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439014")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439014"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439024"),
     title: "Revue de code",
     description: "Effectuer la revue de code pour les pull requests",
     due_date: new Date("2024-03-30T17:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439014")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439014"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439025"),
     title: "Configuration CI/CD",
     description: "Mettre à jour la configuration CI/CD",
     due_date: new Date("2024-03-26T14:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439015")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439015"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439026"),
     title: "Tests de compatibilité",
     description: "Tester la compatibilité avec les différents navigateurs",
     due_date: new Date("2024-03-28T16:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439015")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439015"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439027"),
     title: "Optimisation des images",
     description: "Optimiser les images du site web",
     due_date: new Date("2024-03-25T15:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439015")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439015"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439028"),
     title: "Mise à jour SSL",
     description: "Renouveler les certificats SSL",
     due_date: new Date("2024-03-29T12:00:00.000Z"),
     completed: true,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439015")
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439015"),
   },
   {
+    _id: new Types.ObjectId("507f1f77bcf86cd799439029"),
     title: "Backup de la base de données",
     description: "Effectuer la sauvegarde de la base de données",
     due_date: new Date("2024-03-27T17:00:00.000Z"),
     completed: false,
-    user_id: new Types.ObjectId("507f1f77bcf86cd799439015")
-  }
+    user_id: new Types.ObjectId("507f1f77bcf86cd799439015"),
+  },
 ];

@@ -1,7 +1,9 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document, Types } from "mongoose";
 import { ITask } from "../types/task";
 
-interface ITaskDocument extends ITask, Document {}
+export interface ITaskDocument extends ITask, Document {
+  _id: Types.ObjectId;
+}
 
 const taskSchema = new Schema<ITaskDocument>(
   {
@@ -9,7 +11,7 @@ const taskSchema = new Schema<ITaskDocument>(
     description: { type: String },
     due_date: { type: Date },
     completed: { type: Boolean, default: false },
-    user_id: { type: Schema.Types.ObjectId, ref: 'User', required: true }
+    user_id: { type: Schema.Types.ObjectId, ref: "User", required: true },
   },
   { timestamps: true }
 );
