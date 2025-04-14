@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { UserService } from "../services/userService";
 import { AuthRequest } from "../middleware/isAuth";
+import { mapToUserDTO, mapToUserDTOs } from "../dtos/userDto";
 
 export const getUsers = async (
   req: Request,
@@ -14,8 +15,8 @@ export const getUsers = async (
       res.status(404).json({ message: "No users found" });
       return;
     }
-
-    res.status(200).json({ users: users });
+    const userDTOs = mapToUserDTOs(users);
+    res.status(200).json(userDTOs);
   } catch (error: any) {
     console.error("Error fetching users:", error);
     next(error);
@@ -36,7 +37,9 @@ export const getUser = async (
       return;
     }
 
-    res.status(200).json({ user: user });
+    const userDTO = mapToUserDTO(user);
+
+    res.status(200).json(userDTO);
   } catch (error: any) {
     console.error("Error fetching user:", error);
     next(error);

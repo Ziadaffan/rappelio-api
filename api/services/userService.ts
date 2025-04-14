@@ -1,5 +1,4 @@
 import { IUserDocument } from "../db/models/user";
-import { mapToUserDTO, mapToUserDTOs, UserDTO } from "../dtos/userDto";
 import { UserRepository } from "../repositories/userRepository";
 import bcrypt from "bcryptjs";
 
@@ -15,22 +14,22 @@ export class UserService {
     return UserService.singleton;
   }
 
-  public async findAll(): Promise<UserDTO[] | null> {
+  public async findAll(): Promise<IUserDocument[] | null> {
     const users = await UserRepository.instance().findAll();
     if (!users) {
       return null;
     }
 
-    return mapToUserDTOs(users);
+    return users;
   }
 
-  public async findById(id: string): Promise<UserDTO | null> {
+  public async findById(id: string): Promise<IUserDocument | null> {
     const user = await UserRepository.instance().findById(id);
     if (!user) {
       return null;
     }
 
-    return mapToUserDTO(user);
+    return user;
   }
 
   public async register(user: IUserDocument): Promise<IUserDocument> {
@@ -40,24 +39,24 @@ export class UserService {
   public async update(
     id: string,
     user: IUserDocument
-  ): Promise<UserDTO | null> {
+  ): Promise<IUserDocument | null> {
     const updatedUser = await UserRepository.instance().update(id, user);
 
     if (!updatedUser) {
       return null;
     }
 
-    return mapToUserDTO(updatedUser);
+    return updatedUser;
   }
 
-  public async delete(id: string): Promise<UserDTO | null> {
+  public async delete(id: string): Promise<IUserDocument | null> {
     const deletedUser = await UserRepository.instance().delete(id);
 
     if (!deletedUser) {
       return null;
     }
 
-    return mapToUserDTO(deletedUser);
+    return deletedUser;
   }
 
   public async findByEmail(email: string): Promise<IUserDocument | null> {

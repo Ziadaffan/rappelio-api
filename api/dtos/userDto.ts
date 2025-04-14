@@ -33,5 +33,5 @@ export const mapToUserDTO = (user: IUserDocument): UserDTO => {
 };
 
 export const mapToUserDTOs = (users: IUserDocument[]): UserDTO[] => {
-  return users.map(mapToUserDTO);
+  return users.map((user) => mapToUserDTO(user));
 };
